@@ -6,34 +6,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Armata|Lato" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style1.css">
         <script src="javascript.js" type="text/javascript"></script>
+        <style>
+            .clip-startView {
+                clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 98%, 45% 90%, 0 90%, 0 0);
+                -webkit-clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 98%, 45% 90%, 0 90%, 0 0);
+                clip-path: url("#clip-pathForFirefox");
+                -webkit-clip-path: url("#clip-pathForFirefox");
+            }
+            .clip-img{
+                  clip-path: url("#clip-path-img");
+                  -webkit-clip-path: url("#clip-path-img");
+                  -webkit-clip-path: circle(48% at 50% 50%);
+                  clip-path: circle(48% at 50% 50%);
+            }
+        </style>
     </head>
     <body>
-        <section class="container startView">
+        <section class="container startView clip-startView">
             <div class="row">
                 <div class="col-xs-12 col-sm-9 col-sm-offset-1 col-lg-offset-3 offset"><h1>Czesław Sobczak</h1></div>
-            </div>
-            
+            </div>            
             <div class="row">
-                <div class="col-xs-10 col-sm-9 col-sm-offset-1 col-lg-offset-3 offset"><h3>&nbspRzeczoznawca&nbspbudowlany,<br>&nbspKonstruktor</h3></div>
+                <div class="col-xs-10 col-sm-9 col-sm-offset-1 col-lg-offset-3 offset"><h3>&nbspRzeczoznawca&nbspbudowlany,<br>&nbspKonstruktor</h3></div>                
+            </div>   
+        </section>
+<!-- - - - - - - - - - Polyfill for Firefox- - - - - - - - - - - -->
+        <svg class="clip-svg">
+            <defs>
+                    <clipPath id="clip-pathForFirefox" clipPathUnits="objectBoundingBox">
+                            <polygon points="1 0, 1 .9, .55 .9, .5 .98, .45 .9, 0 .9, 0 0" />
+                    </clipPath>
+            </defs>	
+        </svg>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <div id="hamburgerOverlay">
+            <button onclick="showHMenu()" id="HamburgerBtn"><span></span></button>
+        </div>
+            <nav id="menu">
+<!--                <div id="menuDiv" class="navOffset">-->
+                    <ul id="menuUl">
+                        
+                        <li><a href="#OMnie">O mnie</a></li>
+                        <li><a href="#Oferta">Oferta</a></li>
+                <li><a href="#Projekty">Projekty</a></li>
+                <li><a href="#Partnerzy">Partnerzy</a></li>
+               <li> <a href="#Kontakt">Kontakt</a>
                 
-            </div>
-            <button onclick="showHMenu()" id="HamburgerBtn"><span onclick="showHMenu()" id="HamburgerSpan"></span></button>
-            <nav id="menu" class="navOffset">
-                <div class="flexCenter mobileMenu">
-                <a href="#OMnie"><div class="button">O mnie</div></a>
-                <a href="#Oferta"><div class="button">Oferta</div></a>
-                <a href="#Projekty"><div class="button">Projekty</div></a>
-                <a href="#Partnerzy"><div class="button">Partnerzy</div></a>
-                <a href="#Kontakt"><div class="button">Kontakt</div></a>
-                </div>
+                    </ul>
+<!--                    </div>-->
             </nav>  
-            
-        </section>
-        <section>
-            
-        </section>
+        
         <section id="OMnie">
             <div class="row">
                 <div class="col-xs-12 xs-centered col-sm-12 col-md-3 col-md-offset-5 col-lg-3 col-lg-offset-4">
@@ -41,7 +65,7 @@
                 </div>
             </div>
             <div class="row">
-                <div id="el1" class="col-xs-12 xs-centered col-sm-12 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1">
+                <div id="el1" class="col-xs-12 xs-centered col-sm-12 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1 clip-img">
                     <img src="img/Czeslaw-Sobczak.jpg" alt="Czesław Sobczak" height="260">
                 </div>
                 <div id="el2" class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1 col-lg-7 col-lg-offset-0">
@@ -52,6 +76,18 @@ Proin gravida nibh vel velit auctor aliquet. <br><br>Sed ut imperdiet nisi. Proi
                 </div>
             </div>
         </section>
+<!-- - - - - - - - - - Polyfill for Firefox- - - - - - - - - - - -->
+        <svg class="clip-svg-img">
+            <defs>
+              <!--defines the shape to use for clipping-->
+              <circle id="circle" cx="150" cy="150" r="130" />
+            </defs>
+            <clipPath id="clip-path-img">
+              <!--creates the clipping mask from the shape-->
+              <use xlink:href="#circle" overflow="visible"></use>
+            </clipPath>
+        </svg>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->        
         <section id="Oferta">
             <div class="row">
                 <div class="col-xs-12 col-sm-5 col-sm-offset-1 offset"><h2>Oferta</h2></div>
@@ -76,5 +112,4 @@ Proin gravida nibh vel velit auctor aliquet. <br><br>Sed ut imperdiet nisi. Proi
             </div>
         </section>
     </body>
-
 </html>
