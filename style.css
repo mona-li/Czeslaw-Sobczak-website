@@ -1,0 +1,389 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+h1, h2, h3{
+    font-family: Armata, Calibri, sans-serif;
+}
+h1{
+    font-size: 66px;
+/*    text-align: center;*/
+}
+h2{
+    font-size: 48px;
+    padding: 42px 0 30px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-family: Lato, sans-serif;
+    font-size: 18px !important;
+    line-height: 24px;
+}
+.container{
+    padding-top: 112px;
+    width: 1365px;
+    max-height: 650px;
+    color: #fff;
+    background-repeat: no-repeat;
+
+}
+.row{
+    margin: 0;
+}
+.startView{
+    background-image: url("img/photo-building.jpg");
+    background-position: center;
+    clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 98%, 45% 90%, 0 90%, 0 0);
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 98%, 45% 90%, 0 90%, 0 0);
+    
+    width: auto;
+    
+}
+.offset{
+    padding-left: 48px;
+}
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.button{
+    width: 169px;
+    height: 60px;
+    border: 1px solid #fff;
+    background-color: rgba(149, 149, 149, 0.6);
+    color: #fff;
+    font-size: 23px;
+    font-family: Armata, Calibri, sans-serif;
+    text-align: center;
+    padding: 15px;
+    
+}
+.button:hover{
+    background-color: rgba(241, 61, 116, 0.6);
+    
+}
+a:hover{
+    text-decoration: none;
+}
+.navOffset{
+   margin-top: 185px;
+   margin-bottom: 90px;
+}
+
+#HamburgerBtn{
+    float: right;
+    margin-right: 11%;/*
+    margin-bottom: 40px;*/
+    position: relative;
+    padding: 8px;
+    width: 80px;
+    height: 75px;
+    background: none;
+    border: 2pt solid white;
+    border-radius: 2pt;
+    -webkit-appearance: none;
+    z-index: 2;
+    }
+#HamburgerBtn.open {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 99;
+    }
+#HamburgerBtn span{
+    display: block;
+    height: 3pt;
+    width: 70%;
+    background-color: white;
+    position: absolute;
+    top: 32.5px;
+    left: 10px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+#HamburgerBtn.open span{
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#HamburgerBtn span:before, #HamburgerBtn span:after{
+    content: " ";
+    position: absolute;
+    left: 0px;
+    height: 3pt;
+    width: 100%;
+    background-color: white;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+#HamburgerBtn span:before{
+    top: 18px;
+}
+#HamburgerBtn span:after{
+    bottom: 17px;
+}
+#HamburgerBtn.open span:before{
+    top: 0px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+#HamburgerBtn.open span:after{
+    left: 0px;
+    bottom: 0px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+/*.menuContent a{
+    padding: 15px 45px;
+    text-align: left;
+    font-size: 32px;
+    display: block;
+    color: white;
+}*/
+#OMnie{
+    text-align: justify;
+    background-color: #fff;
+    
+    padding-bottom: 60px;
+    z-index: 1;
+}
+#OMnie img{
+    margin-top: 40px;
+/*    margin-left: 20%;*/
+    -webkit-clip-path: circle(48% at 50% 50%);
+    clip-path: circle(48% at 50% 50%);
+}
+#Oferta{
+    padding-top: 50px;
+    background-color: #25374b;
+    clip-path: polygon(50% 12%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    -webkit-clip-path: polygon(50% 12%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    color: #fff;
+    text-align: justify;
+}
+#Oferta ul li{
+    font-size: 32px;
+}
+@media only screen and (min-width: 1200px) {
+    h1{
+        font-size: 66px; 
+    }
+    h3{
+        font-size: 24px;
+    }
+/*    .startView{
+        padding-left: 80px;
+        padding-right: 80px;
+    }*/
+    .flexCenter{
+        justify-content: center;
+    }
+    nav a{
+        margin: 0 17px;
+    }
+    #HamburgerBtn{
+        display: none;
+    }
+}
+@media (max-width: 1199px){
+    h1{
+        font-size: 50px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    .container{
+        padding-top: 20px;
+    }
+    .startView{
+      height: 350px;
+    }
+    .navOffset{
+         margin-top: 105px;
+         margin-bottom: 60px;
+    }
+    .button{
+        width: 126px;
+        height: 47px;
+        font-size: 18px;
+        padding: 10px;
+    }
+     .flexCenter{
+        justify-content: center;
+    }
+    nav a{
+        margin: 0 7px;
+    }
+    #Oferta{
+        clip-path: polygon(50% 5%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    -webkit-clip-path: polygon(50% 5%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    }
+}
+@media (max-width: 991px){
+    .xs-centered{
+        text-align: center;
+    }
+    .row {
+    display: flex;
+    flex-flow: row wrap;
+    }
+    #el1{
+        order: 2;
+    }
+    #el2{
+        order: 1;
+    }
+    #OMnie img{
+        margin-top: 50px;
+    }
+    .startView{
+      height: 350px;
+    }
+}
+@media (min-width: 675px){
+    #HamburgerBtn{
+        display: none;
+    }
+}
+@media (min-width: 675px) and (max-width: 767px){
+    .startView{
+        max-width: 100%;
+        background-image: url("img/photo-building640.jpg") no-repeat 50% 50%;
+        background-position:center;
+        background‐size: 100% 100%;
+    } 
+    .xs-centered{
+        text-align: center;
+    }
+    .row {
+    display: flex;
+    flex-flow: row wrap;
+    }
+    #el1{
+        order: 2;
+    }
+    #el2{
+        order: 1;
+    }
+    #OMnie img{
+        margin-top: 45px;
+    }
+/*    .mobileMenu{
+        display: list-item;
+        width: 300px;
+        height: 400px;
+        background-color: #5f5a66;  
+        position: absolute;
+        top: 20px;
+        right:10%;
+        z-index: 2;
+    }*/
+    
+}
+@media (max-width: 674px){
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+    .container{
+        max-height: 350px;
+        padding-top: 40px;
+/*        max-width: 360px;*/
+    }
+    .startView{
+        max-width: 100%;
+        height: 300px;
+        background-image: url("img/photo-building360.jpg") no‐repeat 50% 50%; 
+        background‐size: 100% 100%;
+        background-position: center;
+        -webkit-clip-path: polygon(100% 0, 100% 80%, 60% 80%, 50% 89%, 40% 80%, 0 80%, 0 0);
+        clip-path: polygon(100% 0, 100% 80%, 60% 80%, 50% 89%, 40% 80%, 0 80%, 0 0);
+    }
+    .xs-centered{
+        text-align: center;
+    }
+    .button{
+        display: none;
+    }
+    #HamburgerBtn{
+        margin-top: 0px;
+    }
+    .row {
+    display: flex;
+    flex-flow: row wrap;
+    }
+    #el1{
+        order: 2;
+    }
+    #el2{
+        order: 1;
+    }
+    #OMnie img{
+        margin-top: 45px;
+    }
+    #Oferta{
+        clip-path: polygon(50% 4%, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+    -webkit-clip-path: polygon(50% 4%, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+    }
+}
+@media (max-width: 400px){
+    h1{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .container{
+        max-height: 300px;
+        padding-top: 35px;
+        
+/*        max-width: 360px;*/
+    }
+    #HamburgerBtn{
+        margin-top: 10px;
+    }
+    .mobileMenu{
+        background-color: yellow;
+    }
+}
