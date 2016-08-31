@@ -15,11 +15,29 @@
                 clip-path: url("#clip-pathForFirefox");
                 -webkit-clip-path: url("#clip-pathForFirefox");
             }
-            .clip-img{
+/*            .clip-img{
                   clip-path: url("#clip-path-img");
                   -webkit-clip-path: url("#clip-path-img");
                   -webkit-clip-path: circle(48% at 50% 50%);
                   clip-path: circle(48% at 50% 50%);
+            }*/
+            @media only screen and (min-width: 1200px) {
+                .clip-Oferta{
+                    clip-path: url("#clip-pathForFirefox2");
+                    -webkit-clip-path: url("#clip-pathForFirefox2");
+                }
+            }
+            @media (min-width: 680px) and (max-width: 1199px){
+                .clip-Oferta{
+                    clip-path: url("#clip-pathForFirefox2tablet");
+                    -webkit-clip-path: url("#clip-pathForFirefox2tablet");
+                }
+            }
+            @media (max-width: 679px){    
+                .clip-Oferta{
+                    clip-path: url("#clip-pathForFirefox2smartphone");
+                    -webkit-clip-path: url("#clip-pathForFirefox2smartphone");
+                }
             }
         </style>
     </head>
@@ -65,9 +83,12 @@
                 </div>
             </div>
             <div class="row">
-                <div id="el1" class="col-xs-12 xs-centered col-sm-12 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1 clip-img">
-                    <img src="img/Czeslaw-Sobczak.jpg" alt="Czesław Sobczak" height="260">
+                <div id="el1" class="col-xs-12 xs-centered col-sm-12 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1">
+                    <div class="imgWrapper mini">
+                        <img src="img/Czeslaw-Sobczak.jpg" alt="Czesław Sobczak" height="260">
+                    </div>
                 </div>
+                
                 <div id="el2" class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1 col-lg-7 col-lg-offset-0">
                   
                     <h4>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. SeThis is Photoshop's version  of Lorem Ipsum. 
@@ -76,19 +97,21 @@ Proin gravida nibh vel velit auctor aliquet. <br><br>Sed ut imperdiet nisi. Proi
                 </div>
             </div>
         </section>
-<!-- - - - - - - - - - Polyfill for Firefox- - - - - - - - - - - -->
-        <svg class="clip-svg-img">
-            <defs>
-              <!--defines the shape to use for clipping-->
-              <circle id="circle" cx="150" cy="150" r="130" />
-            </defs>
-            <clipPath id="clip-path-img">
-              <!--creates the clipping mask from the shape-->
-              <use xlink:href="#circle" overflow="visible"></use>
-            </clipPath>
-        </svg>
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->        
-        <section id="Oferta">
+        <!-- - - - - - - - - - Polyfill for Firefox- - - - - - - - - - - -->
+<!--        <div class="test">
+        <svg class="clip-svg-img" width="100%" height="auto" viewBox="-170 -200 260 260" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                          defines the shape to use for clipping
+                          <circle id="circle" cx="150" cy="150" r="130" />
+                        </defs>
+                        <clipPath id="clip-path-img">
+                          creates the clipping mask from the shape
+                          <use xlink:href="#circle" overflow="visible"></use>
+                        </clipPath>
+                        </svg>
+        </div>-->
+                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <section id="Oferta" class="clip-Oferta">
             <div class="row">
                 <div class="col-xs-12 col-sm-5 col-sm-offset-1 offset"><h2>Oferta</h2></div>
             </div>
@@ -111,5 +134,20 @@ Proin gravida nibh vel velit auctor aliquet. <br><br>Sed ut imperdiet nisi. Proi
                 </div> 
             </div>
         </section>
+<!-- - - - - - - - - - Polyfill for Firefox- - - - - - - - - - - -->
+        <svg class="clip-svg">
+            <defs>
+                    <clipPath id="clip-pathForFirefox2" clipPathUnits="objectBoundingBox">
+                            <polygon points=".5 .12, .55 0, 1 0, 1 1, 0 1, 0 0, .45 0" />
+                    </clipPath>
+                    <clipPath id="clip-pathForFirefox2tablet" clipPathUnits="objectBoundingBox">
+                            <polygon points=".5 .05, .55 0, 1 0, 1 1, 0 1, 0 0, .45 0" />
+                    </clipPath>
+                    <clipPath id="clip-pathForFirefox2smartphone" clipPathUnits="objectBoundingBox">
+                            <polygon points=".5 .03, .55 0, 1 0, 1 1, 0 1, 0 0, .45 0" />
+                    </clipPath>
+            </defs>	
+        </svg>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     </body>
 </html>
