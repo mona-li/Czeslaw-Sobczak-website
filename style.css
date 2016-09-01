@@ -287,7 +287,7 @@ a:hover{
 .textPosition{
     position: absolute;
     width: 30%;
-    top: 45%;
+    top: 40%;
     left: 10%;
     background-color: rgba(37, 55, 75, 0.45);
     z-index: 1;
@@ -297,7 +297,7 @@ a:hover{
     padding: 3px;
 }
 .carousel-indicators{
-    top: 570px;
+    top: 80%;
 }
 .carousel-indicators li{
     width: 20px;
@@ -316,6 +316,9 @@ a:hover{
 .glyphicon{
     position: absolute;
     top: 45%;
+}
+.carousel-control{
+    height: 90%;
 }
 @media only screen and (min-width: 1200px) {
     h1{
@@ -404,7 +407,13 @@ a:hover{
         margin-left: auto;
     }
     .startView{
-      height: 350px;
+        height: 350px;
+    }
+    .textPosition{
+        top: 35%;
+    }
+    .textPosition h3{
+        font-size: 16px;
     }
 }
 @media (min-width: 680px){
@@ -443,6 +452,10 @@ a:hover{
     #Oferta{
         clip-path: polygon(50% 5%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
         -webkit-clip-path: polygon(50% 5%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    }
+    .textPosition{
+        width: 40%;
+        top: 35%;
     }
 }
 @media (max-width: 679px){
@@ -525,6 +538,9 @@ a:hover{
     #Oferta{
         clip-path: polygon(50% 3%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
         -webkit-clip-path: polygon(50% 3%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    }
+    .textPosition{
+        display: none;
     }
 }
 @media (max-width: 400px){

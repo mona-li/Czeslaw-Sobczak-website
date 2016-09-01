@@ -14,25 +14,49 @@
             .clip-startView {
                 clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 98%, 45% 90%, 0 90%, 0 0);
                 -webkit-clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 98%, 45% 90%, 0 90%, 0 0);
-                clip-path: url("#clip-pathForFirefox");
-                -webkit-clip-path: url("#clip-pathForFirefox");
+                clip-path: url("#clip-pathForFirefox1");
+                -webkit-clip-path: url("#clip-pathForFirefox1");
             }
             @media only screen and (min-width: 1200px) {
+                .clip-Projekty-startView{
+                    clip-path: url("#clip-pathForFirefox1");
+                    -webkit-clip-path: url("#clip-pathForFirefox1");
+                }
                 .clip-Oferta{
                     clip-path: url("#clip-pathForFirefox2");
                     -webkit-clip-path: url("#clip-pathForFirefox2");
                 }
+                .clip-Projekty{
+                    clip-path: url("#clip-pathForFirefox3");
+                    -webkit-clip-path: url("#clip-pathForFirefox3");
+                }
             }
             @media (min-width: 680px) and (max-width: 1199px){
+                .clip-Projekty-startView{
+                    clip-path: url("#clip-pathForFirefox1tablet");
+                    -webkit-clip-path: url("#clip-pathForFirefox1tablet");
+                }
                 .clip-Oferta{
                     clip-path: url("#clip-pathForFirefox2tablet");
                     -webkit-clip-path: url("#clip-pathForFirefox2tablet");
                 }
+                .clip-Projekty{
+                    clip-path: url("#clip-pathForFirefox3tablet");
+                    -webkit-clip-path: url("#clip-pathForFirefox3tablet");
+                }
             }
             @media (max-width: 679px){    
+                .clip-Projekty-startView{
+                    clip-path: url("#clip-pathForFirefox1smartphone");
+                    -webkit-clip-path: url("#clip-pathForFirefox1smartphone");
+                }
                 .clip-Oferta{
                     clip-path: url("#clip-pathForFirefox2smartphone");
                     -webkit-clip-path: url("#clip-pathForFirefox2smartphone");
+                }
+                .clip-Projekty{
+                    clip-path: url("#clip-pathForFirefox3smartphone");
+                    -webkit-clip-path: url("#clip-pathForFirefox3smartphone");
                 }
             }
         </style>
@@ -49,8 +73,14 @@
 <!-- - - - - - - - - - Polyfill for Firefox- - - - - - - - - - - -->
         <svg class="clip-svg">
             <defs>
-                    <clipPath id="clip-pathForFirefox" clipPathUnits="objectBoundingBox">
+                    <clipPath id="clip-pathForFirefox1" clipPathUnits="objectBoundingBox">
                             <polygon points="1 0, 1 .9, .55 .9, .5 .98, .45 .9, 0 .9, 0 0" />
+                    </clipPath>
+                    <clipPath id="clip-pathForFirefox1tablet" clipPathUnits="objectBoundingBox">
+                            <polygon points="1 0, 1 .9, .55 .9, .5 .95, .45 .9, 0 .9, 0 0" />
+                    </clipPath>
+                    <clipPath id="clip-pathForFirefox1smartphone" clipPathUnits="objectBoundingBox">
+                            <polygon points="1 0, 1 .9, .55 .9, .5 .97, .45 .9, 0 .9, 0 0" />
                     </clipPath>
             </defs>	
         </svg>
@@ -125,11 +155,19 @@ Proin gravida nibh vel velit auctor aliquet. <br><br>Sed ut imperdiet nisi. Proi
                     </clipPath>
 <!--                clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 98%, 45% 90%, 0 90%, 0 0);
                 0 0, .45 0, .5 .12, .55 0, 1 0, 1 1, .55 1.12, .5 1.12, .45 1, 0 1"-->
-
+                    <clipPath id="clip-pathForFirefox3" clipPathUnits="objectBoundingBox">
+                            <polygon points=".5 .09, .55 0, 1 0, 1 .9, .55 .9, .5 0.99, .45 .9, 0 .9, 0 0 , .45 0" />
+                    </clipPath>
+                    <clipPath id="clip-pathForFirefox3tablet" clipPathUnits="objectBoundingBox">
+                            <polygon points=".5 .08, .55 0, 1 0, 1 .9, .55 .9, .5 0.98, .45 .9, 0 .9, 0 0 , .45 0" />
+                    </clipPath>
+                    <clipPath id="clip-pathForFirefox3smartphone" clipPathUnits="objectBoundingBox">
+                            <polygon points=".5 .07, .55 0, 1 0, 1 .9, .55 .9, .5 0.97, .45 .9, 0 .9, 0 0 , .45 0" />
+                    </clipPath>
             </defs>	
         </svg>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-        <section id="Projekty" class="clip-startView">
+        <section id="Projekty" class="clip-Projekty-startView">
             <div id="title"><h2>Projekty</h2></div>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -141,7 +179,7 @@ Proin gravida nibh vel velit auctor aliquet. <br><br>Sed ut imperdiet nisi. Proi
             </ol>
 
             <!-- Wrapper for slides -->
-            <div class="carousel-inner clip-Oferta " role="listbox">
+            <div class="carousel-inner clip-Projekty" role="listbox">
                 <div class="item active">
                     <img src="img/photo-projects1.jpg" alt="Chania">
                     <div class="textPosition">
