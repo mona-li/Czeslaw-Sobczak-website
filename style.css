@@ -18,6 +18,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+.test{
+    background-color: red !important;
+}
 h1, h2, h3{
     font-family: Armata, Calibri, sans-serif;
 }
@@ -75,7 +78,7 @@ ul li{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 #menu ul li a{
     display: inline-block;
@@ -89,6 +92,11 @@ ul li{
     text-align: center;
     padding: 15px;
     border-radius: 2px;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
     
 }
 #menu ul li a:hover{
@@ -97,16 +105,43 @@ ul li{
     color: #fff;
 }
 
-
-a:hover{
+    /*------------------ classes added by javascript on scroll ----------------*/
+.sticky{        /* added to menu section */
     
+/*    margin: 0 auto !important;*/
+    padding: 10px 0;
+    
+    width: 100%; 
+    
+    top: -450px;
+    z-index: 999; 
+    background-color: #fff;
+    position: fixed;
+    -webkit-transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
+    -moz-transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
+    -ms-transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
+    -o-transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
+    transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
 }
-.navOffset{
+
+#menu .smaller{        /* added to menu buttons */
+    height: 30px;
+    padding: 5px 0;
+    font-size: 15px;
+    background-color: rgb(149, 149, 149);
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+/*-------------------------------------------------------------------------*/
+/*.navOffset{
     margin: 0 auto;
-/*   position: absolute;
+   position: absolute;
    top: 100px;
-   margin-bottom: 90px;*/
-}
+   margin-bottom: 90px;
+}*/
 /*.flexCenter{
     display: flex;
     align-items: center;
@@ -138,6 +173,10 @@ a:hover{
     top: 0;
     right: 0;
     z-index: 99;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
     }
 
 #HamburgerBtn span{
@@ -169,7 +208,7 @@ a:hover{
     left: 0px;
     height: 3pt;
     width: 100%;
-    background-color: white;
+    background-color: #fff;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -335,6 +374,18 @@ a:hover{
         left: 50%;
         margin-left: -512.5px;
     }
+    .backgroundUl{
+        left: 0 !important;
+        margin-left: 0px !important;
+        display: flex ;
+        justify-content: center;
+        background-color: #fff;
+        width: 100%;
+    }
+    .sticky{
+        left: 0;
+        top: -450px;
+    }
     nav a{
         margin: 0 14px;
     }
@@ -381,6 +432,12 @@ a:hover{
         -webkit-clip-path: polygon(50% 5%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
     }
 }
+@media (min-width: 680px) and (max-width: 1199px){
+    .sticky{
+        left: 0;
+        top: -250px;
+    }
+}
 @media (max-width: 991px){
     .xs-centered{
         text-align: center;
@@ -409,6 +466,7 @@ a:hover{
     .startView{
         height: 350px;
     }
+    
     .textPosition{
         top: 35%;
     }
@@ -485,6 +543,12 @@ a:hover{
     #HamburgerBtn{
         margin-top: 0px;
     }
+    .sticky{
+        position: fixed !important;
+        top: 10px !important;
+        right: 10px !important;
+        background-color: #838e93 !important;
+    }
     #menu{
         position: absolute;
         z-index: 1;
@@ -507,7 +571,7 @@ a:hover{
     }
     #menuUl.show li{
         display: block;
-        margin: 0;
+        margin: 0 25px;
         padding: 0px;
         display: table;
     }
@@ -516,15 +580,38 @@ a:hover{
         border: none;
         background-color: transparent;
         margin: 0;
-        padding: 20px;
+        padding: 5%;
         font-size: 30px;
         text-align: center;
         vertical-align: middle;
-        width: 300px;
+        width: 250px;
+        border-bottom: 2px solid #fff;
+    }
+    #menuUl.show #last{
+        border-bottom-style: none;
+        padding-bottom: 6%;
     }
     #menuUl.show li a:hover{
-        background-color: rgb(149, 149, 149);
+        background-color: transparent;
     }
+    .stickySMenuContent{
+        position: fixed !important;
+        left: inherit !important;
+        top: 0 !important;
+        right: 0px !important;
+        margin-left: 0 !important;
+    }
+/*    #menuUl li a:after {
+        content: "";
+        display: block;
+       
+        right: 300px;
+        height: 2px;
+        width: 220px;
+        margin-left: 30px;
+        margin-top: 6%;
+        background-color: #fff;
+    }*/
     .row {
         display: flex;
         flex-flow: row wrap;
