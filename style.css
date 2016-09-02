@@ -1,0 +1,645 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+.test{
+    background-color: red !important;
+}
+h1, h2, h3{
+    font-family: Armata, Calibri, sans-serif;
+}
+h1{
+    font-size: 66px;
+/*    text-align: center;*/
+}
+h2{
+    font-size: 48px;
+    padding: 42px 0 30px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-family: Lato, sans-serif;
+    font-size: 18px !important;
+    line-height: 24px;
+}
+.container{
+    padding-top: 112px;
+    width: 1365px;
+    max-height: 650px;
+    color: #fff;
+    background-repeat: no-repeat;
+
+}
+.row{
+    margin: 0;
+}
+.startView{
+    background-image: url("img/photo-building.jpg");
+    background-position: center;
+    clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 98%, 45% 90%, 0 90%, 0 0);
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 98%, 45% 90%, 0 90%, 0 0);
+    clip-path: url("#clipPolygon");
+    -webkit-clip-path: url("#clipPolygon");
+    width: auto;
+    
+}
+
+.offset{
+    padding-left: 48px;
+}
+ul li{
+    float: left;
+    margin: 4px;
+}
+/*#menu{
+    margin: 0 auto;
+    
+}*/
+#menuUl {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+/*    overflow: hidden;*/
+}
+#menu ul li a{
+    display: inline-block;
+    width: 169px;
+    height: 60px;
+    border: 1px solid #fff;
+    background-color: rgba(149, 149, 149, 0.6);
+    color: #fff;
+    font-size: 23px;
+    font-family: Armata, Calibri, sans-serif;
+    text-align: center;
+    padding: 15px;
+    border-radius: 2px;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+    
+}
+#menu ul li a:hover{
+    background-color: rgba(173, 2, 52, 0.6);
+    text-decoration: none;
+    color: #fff;
+}
+
+    /*------------------ classes added by javascript on scroll ----------------*/
+.sticky{        /* added to menu section */
+    
+/*    margin: 0 auto !important;*/
+    padding: 10px 0;
+    
+    width: 100%; 
+    
+    top: -450px;
+    z-index: 999; 
+    background-color: #fff;
+    position: fixed;
+    -webkit-transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
+    -moz-transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
+    -ms-transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
+    -o-transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
+    transition: width 0.5s, position 0.5s, left 0.5s, margin 0.5s;
+}
+
+#menu .smaller{        /* added to menu buttons */
+    height: 30px;
+    padding: 5px 0;
+    font-size: 15px;
+    background-color: rgb(149, 149, 149);
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+/*-------------------------------------------------------------------------*/
+/*.navOffset{
+    margin: 0 auto;
+   position: absolute;
+   top: 100px;
+   margin-bottom: 90px;
+}*/
+/*.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}*/
+#hamburgerOverlay{
+    position: absolute;
+    top: 155px;
+    right: 10px;
+    
+}
+#HamburgerBtn{
+    
+/*    margin-bottom: 40px;*/
+    position: relative;
+    padding: 8px;
+    width: 80px;
+    height: 75px;
+    background: none;
+    border: 2pt solid #fff;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    z-index: 3;
+    }
+   
+#HamburgerBtn.open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    }
+
+#HamburgerBtn span{
+    display: block;
+    height: 3pt;
+    width: 72.5%;
+    background-color: white;
+    position: absolute;
+    top: 32.5px;
+    left: 10px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+#HamburgerBtn.open span{
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#HamburgerBtn span:before, #HamburgerBtn span:after{
+    content: " ";
+    position: absolute;
+    left: 0px;
+    height: 3pt;
+    width: 100%;
+    background-color: #fff;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+#HamburgerBtn span:before{
+    top: 18px;
+}
+#HamburgerBtn span:after{
+    bottom: 17px;
+}
+#HamburgerBtn.open span:before{
+    top: 0px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+#HamburgerBtn.open span:after{
+    left: 0px;
+    bottom: 0px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(90deg);
+}
+/*.menuContent a{
+    padding: 15px 45px;
+    text-align: left;
+    font-size: 32px;
+    display: block;
+    color: white;
+}*/
+#OMnie{
+    text-align: justify;
+    background-color: #fff;
+    padding-bottom: 80px;
+    z-index: 1;
+}
+/*#OMnie img{
+    margin-top: 20px;
+    margin-left: 20%;
+    -webkit-clip-path: circle(48% at 50% 50%);
+    clip-path: circle(48% at 50% 50%);
+}*/
+.imgWrapper img{
+    position: absolute;
+    width: 108%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    min-width: 108%;
+    min-height: 108%;
+    left: -4%;
+}
+.imgWrapper{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-sizing: content-box;
+    width: 260px;
+    height: 0;
+    padding-bottom: 260px;
+    border-radius: 50%;
+    margin-top: 60px;
+}
+#Oferta{
+    padding-top: 50px;
+    padding-bottom: 90px;
+    background-color: #25374b;
+    color: #fff;
+    text-align: justify;
+}
+#Oferta ul li{
+    font-size: 32px;
+}
+.show{
+    display:block;
+}
+.clip-svg{
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+}
+.clip-svg-img{
+    position: absolute;
+    display: block;
+    margin: auto;
+}
+#Projekty{
+    position: relative;
+    background-color: #25374b;
+}
+#Projekty img{
+    width: 100%;
+}
+#title{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(37, 55, 75, 0.45);
+    z-index: 1;
+    
+}
+#Projekty div h2{    
+    color: #fff; 
+    padding: 3px;
+}
+.textPosition{
+    position: absolute;
+    width: 30%;
+    top: 40%;
+    left: 10%;
+    background-color: rgba(37, 55, 75, 0.45);
+    z-index: 1;
+}
+.textPosition h3{ 
+    color: #fff;
+    padding: 3px;
+}
+.carousel-indicators{
+    top: 80%;
+}
+.carousel-indicators li{
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    background-color: rgba(37, 55, 75, 0.45);
+    border: 1px solid #fff;
+}
+.carousel-indicators .active{
+    width: 21px;
+    height: 21px;
+    margin: 4px;
+    background-color: #fff;
+    border: 1px solid rgba(37, 55, 75, 0.45);
+}
+.glyphicon{
+    position: absolute;
+    top: 45%;
+}
+.carousel-control{
+    height: 90%;
+}
+@media only screen and (min-width: 1200px) {
+    h1{
+        font-size: 66px; 
+    }
+    h3{
+        font-size: 24px;
+    }
+    .startView{
+      height: 650px;
+    }
+    #menuUl{
+        top: 450px;
+        left: 50%;
+        margin-left: -512.5px;
+    }
+    .backgroundUl{
+        left: 0 !important;
+        margin-left: 0px !important;
+        display: flex ;
+        justify-content: center;
+        background-color: #fff;
+        width: 100%;
+    }
+    .sticky{
+        left: 0;
+        top: -450px;
+    }
+    nav a{
+        margin: 0 14px;
+    }
+    #HamburgerBtn{
+        display: none;
+    }
+    .imgWrapper{
+        width: 260px;
+        padding-bottom: 260px;
+        margin-top: 10%;
+    }
+    #Oferta{
+        clip-path: polygon(50% 9%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+        -webkit-clip-path: polygon(50% 9%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    }
+}
+@media (max-width: 1199px){
+    h1{
+        font-size: 50px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    .container{
+        padding-top: 20px;
+    }
+    .startView{
+      height: 350px;
+    }
+    #menuUl{
+        top: 240px;
+        left: 50%;
+        margin-left: -355px;
+    }
+    #menu ul li a{
+        width: 126px;
+        height: 47px;
+        font-size: 18px;
+        padding: 10px;
+        margin: 0 4px;
+    }
+    #Oferta{
+        clip-path: polygon(50% 5%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+        -webkit-clip-path: polygon(50% 5%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    }
+}
+@media (min-width: 680px) and (max-width: 1199px){
+    .sticky{
+        left: 0;
+        top: -250px;
+    }
+}
+@media (max-width: 991px){
+    .xs-centered{
+        text-align: center;
+    }
+    #menu ul li a{
+        margin: 0 1px;
+    }
+    #menuUl{
+        left: 50%;
+        margin-left: -340px;
+    }
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #el1{
+        order: 2;
+    }
+    #el2{
+        order: 1;
+    }
+    .mini-center{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .startView{
+        height: 350px;
+    }
+    
+    .textPosition{
+        top: 35%;
+    }
+    .textPosition h3{
+        font-size: 16px;
+    }
+}
+@media (min-width: 680px){
+    #HamburgerBtn{
+        display: none;
+    }
+    .flexCenter{
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+    }
+    .navOffset{
+        margin: 0 auto;
+    }   
+}
+@media (min-width: 680px) and (max-width: 767px){
+    .startView{
+        max-width: 100%;
+        background-image: url("img/photo-building640.jpg") no-repeat 50% 50%;
+        background-position:center;
+        background‐size: 100% 100%;
+    } 
+    .xs-centered{
+        text-align: center;
+    }
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #el1{
+        order: 2;
+    }
+    #el2{
+        order: 1;
+    }
+    #Oferta{
+        clip-path: polygon(50% 5%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+        -webkit-clip-path: polygon(50% 5%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    }
+    .textPosition{
+        width: 40%;
+        top: 35%;
+    }
+}
+@media (max-width: 679px){
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container{
+        max-height: 350px;
+        padding-top: 40px;
+    }
+    .startView{
+        max-width: 100%;
+        height: 300px;
+        background-image: url("img/photo-building360.jpg") no‐repeat 50% 50%; 
+        background‐size: 100% 100%;
+        background-position: center;
+        -webkit-clip-path: polygon(100% 0, 100% 80%, 60% 80%, 50% 89%, 40% 80%, 0 80%, 0 0);
+        clip-path: polygon(100% 0, 100% 80%, 60% 80%, 50% 89%, 40% 80%, 0 80%, 0 0);
+    }
+    .xs-centered{
+        text-align: center;
+    }
+    #HamburgerBtn{
+        margin-top: 0px;
+    }
+    .sticky{
+        position: fixed !important;
+        top: 10px !important;
+        right: 10px !important;
+        background-color: #838e93 !important;
+    }
+    #menu{
+        position: absolute;
+        z-index: 1;
+        top: -95px;
+        right: -40px;
+    }
+    #menuUl{  
+        display: none;
+    }
+    #menuUl.show {
+        display: block;
+        position: absolute;
+        padding-top: 85px;
+        width: 300px;
+        background-color: #838e93; /*#25374b; */
+        border: 2px solid;
+        border-color: rgba(149, 149, 149, 0.6);
+        z-index: 0;
+        
+    }
+    #menuUl.show li{
+        display: block;
+        margin: 0 25px;
+        padding: 0px;
+        display: table;
+    }
+     #menuUl.show li a{
+        display: table-cell;
+        border: none;
+        background-color: transparent;
+        margin: 0;
+        padding: 5%;
+        font-size: 30px;
+        text-align: center;
+        vertical-align: middle;
+        width: 250px;
+        border-bottom: 2px solid #fff;
+    }
+    #menuUl.show #last{
+        border-bottom-style: none;
+        padding-bottom: 6%;
+    }
+    #menuUl.show li a:hover{
+        background-color: transparent;
+    }
+    .stickySMenuContent{
+        position: fixed !important;
+        left: inherit !important;
+        top: 0 !important;
+        right: 0px !important;
+        margin-left: 0 !important;
+    }
+/*    #menuUl li a:after {
+        content: "";
+        display: block;
+       
+        right: 300px;
+        height: 2px;
+        width: 220px;
+        margin-left: 30px;
+        margin-top: 6%;
+        background-color: #fff;
+    }*/
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #el1{
+        order: 2;
+    }
+    #el2{
+        order: 1;
+    }
+    #Oferta{
+        clip-path: polygon(50% 3%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+        -webkit-clip-path: polygon(50% 3%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    }
+    .textPosition{
+        display: none;
+    }
+}
+@media (max-width: 400px){
+    h1{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .container{
+        max-height: 300px;
+        padding-top: 35px;
+    }
+}
